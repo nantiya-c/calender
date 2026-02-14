@@ -1,0 +1,108 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  width: 100vw;
+  height: 100vh;
+  user-select: none;
+  -webkit-app-region: drag;
+  border-radius: 20px;
+  background: transparent;
+
+  font-family: 'Pixelify Sans', sans-serif;
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  width: 13.375rem;
+  padding: 1rem 1.0625rem;
+
+  background-image: url("assets/outer-frame-bg.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  opacity: 0.8;
+}
+
+button,
+input,
+textarea,
+select {
+  -webkit-app-region: no-drag;
+  cursor: pointer;
+}
+
+.title {
+  display: flex;
+  width: 157px;
+  aspect-ratio: 157/27;
+  padding: 0.25rem 0.625rem;
+  justify-content: center;
+  align-items: center;
+
+  border-radius: 6.25rem;
+  border: 1px solid #C079FF;
+  background: rgba(210, 164, 255, 0.40);
+
+  color: #FFF;
+
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+#calendar {
+  display: flex;
+  width: 11.25rem;
+  height: 10.0625rem;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+
+  background-image: url("assets/inner-frame-bg.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+#day {
+  color: #FFF;
+  text-align: center;
+  -webkit-text-stroke-width: 1.5px;
+  -webkit-text-stroke-color: #B58CD9;
+
+  font-size: 7.8rem;
+  font-weight: 400;
+  line-height: 1;
+  letter-spacing: 0.35rem;
+
+  display: flex;
+  width: 11.25rem;
+  height: 4.4375rem;
+  justify-content: center;
+  align-items: center;
+}
+
+#month {
+  color: #FFF;
+  text-align: center;
+  -webkit-text-stroke-width: 1.5px;
+  -webkit-text-stroke-color: #B58CD9;
+
+  font-weight: 400;
+  line-height: 1;
+  letter-spacing: 0.2rem;
+
+  width: 8.125rem;
+
+  /* 🔥 auto scale ตามกรอบ */
+  font-size: clamp(1.4rem, 4.5vw, 2rem);
+
+  white-space: nowrap;
+}
